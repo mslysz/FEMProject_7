@@ -1,10 +1,14 @@
-import Header from './components/Header';
 import './styles.scss';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './About';
 
 function App() {
   return (
-    <main>
+    <main className='container'>
       <Header />
+      <Hero />
+      <About />
     </main>
   );
 }

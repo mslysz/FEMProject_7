@@ -5,13 +5,13 @@ const Header = () => {
   return (
     <>
       <header className='header'>
+        <span className='burger-icon'>
+          <img src={burgerIcon} alt='burger-menu-icon' />
+        </span>
         <figure className='header__logo'>
           <img src={logo} alt='logo-image' />
         </figure>
         <Navigation />
-        <span className='burger-icon'>
-          <img src={burgerIcon} alt='burger-menu-icon' />
-        </span>
       </header>
     </>
   );
