@@ -1,0 +1,21 @@
+.nav {
+  display: none;
+  font-size: 1.6rem;
+
+  &__visible {
+    display: block;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    text-align: center;
+    margin: 0 0.5em;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $Black;
+  }
+}

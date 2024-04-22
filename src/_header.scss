@@ -1,3 +1,16 @@
+// .burger-icon {
+//   display: none;
+// }
+.header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  padding: 4em 3em;
+  &__logo {
+    margin-right: auto;
+  }
+}
 .burger-icon {
-  display: none;
+  margin-right: auto;
+  cursor: pointer;
 }
