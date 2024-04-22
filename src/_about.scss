@@ -1,0 +1,16 @@
+.about {
+  &__info {
+    padding: 5em 2.2em 3em;
+    &-title {
+      font-size: 1.5em;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+    }
+    &-description {
+      font-weight: 500;
+      padding: 1.3em 0 0 0;
+      font-size: 1rem;
+      color: $DarkGray;
+    }
+  }
+}
