@@ -6,11 +6,11 @@
   align-items: center;
   position: absolute;
   top: -12rem;
-
   left: 0;
   background-color: $White;
   width: 100%;
   transition: 0.3s ease-in-out;
+  z-index: 8;
   &__visible {
     top: 0;
   }

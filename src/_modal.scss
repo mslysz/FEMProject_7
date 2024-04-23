@@ -1,0 +1,17 @@
+.modal-container {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(35, 33, 33, 0.552);
+  visibility: hidden;
+  opacity: 0;
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 0.3s;
+  }
+}
