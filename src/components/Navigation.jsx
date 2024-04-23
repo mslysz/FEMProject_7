@@ -1,6 +1,6 @@
-const Navigation = () => {
+const Navigation = ({ isVisible }) => {
   return (
-    <nav className='nav'>
+    <nav className={isVisible ? 'nav nav__visible' : 'nav'}>
       <ul className='nav__list'>
         <li className='nav__item'>
           <a href='#' className='nav__link'>
