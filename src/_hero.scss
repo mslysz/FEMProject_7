@@ -44,6 +44,11 @@
       width: 55px;
       border: none;
       cursor: pointer;
+      transition: 0.3s;
+    }
+    .prev-btn:hover,
+    .next-btn:hover {
+      background-color: $VeryDarkGray;
     }
   }
 }
