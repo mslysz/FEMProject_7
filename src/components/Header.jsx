@@ -1,12 +1,9 @@
 import logo from '../images/logo.svg';
 import burgerIcon from '../images/icon-hamburger.svg';
 import Navigation from './Navigation';
-import { useState } from 'react';
 import closeIcon from '../images/icon-close.svg';
-import Modal from './Modal';
-const Header = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
+const Header = ({ isVisible, setIsVisible }) => {
   const switchMenu = () => {
     setIsVisible(!isVisible);
   };
@@ -33,7 +30,6 @@ const Header = () => {
         </span>
 
         <Navigation isVisible={isVisible} />
-        <Modal isVisible={isVisible} />
       </header>
     </>
   );
