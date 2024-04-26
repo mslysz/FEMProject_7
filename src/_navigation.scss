@@ -11,6 +11,13 @@
   width: 100%;
   transition: 0.3s ease-in-out;
   z-index: 8;
+  @media (min-width: 1125px) {
+    position: static;
+    background-color: transparent;
+    justify-content: start;
+    margin-left: 2em;
+    transition: none;
+  }
   &__visible {
     top: 0;
   }
@@ -31,5 +38,34 @@
     font-size: 1rem;
     font-weight: 700;
     margin: 0 0.5em;
+    @media (min-width: 480px) {
+      margin: 0 1.5em;
+    }
+    @media (min-width: 1125px) {
+      color: $White;
+      position: relative;
+      &::before,
+      ::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: $White;
+        transition: 0.3s;
+      }
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::after {
+        right: 50%;
+        transform: translate(50%);
+      }
+      &:hover::before,
+      :hover::after {
+        width: 50%;
+      }
+    }
   }
 }
