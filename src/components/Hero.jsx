@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import heroData from '../data';
 import arrowIcon from '../images/icon-arrow.svg';
-// import LeftArrowSVG from './LeftArrowSVG';
-// import RightArrowSVG from './RightArrowSVG';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'; //<FaAngleLeft />
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 375);
