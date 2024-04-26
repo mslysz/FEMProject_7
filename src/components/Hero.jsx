@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import heroData from '../data';
 import arrowIcon from '../images/icon-arrow.svg';
-import LeftArrowSVG from './LeftArrowSVG';
-import RightArrowSVG from './RightArrowSVG';
-
+// import LeftArrowSVG from './LeftArrowSVG';
+// import RightArrowSVG from './RightArrowSVG';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'; //<FaAngleLeft />
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 375);
@@ -44,11 +44,19 @@ const Hero = () => {
           SHOP NOW <img src={arrowIcon} alt='arrow-image' />
         </a>
         <article className='hero__button-container'>
-          <button className='prev-btn' onClick={handlePrevClick}>
-            <LeftArrowSVG />
+          <button
+            type='button'
+            className='button-prev'
+            onClick={handlePrevClick}
+          >
+            <FaAngleLeft />
           </button>
-          <button className='next-btn' onClick={handleNextClick}>
-            <RightArrowSVG />
+          <button
+            type='button'
+            className='button-next'
+            onClick={handleNextClick}
+          >
+            <FaAngleRight />
           </button>
         </article>
       </article>

@@ -1,5 +1,5 @@
-import darkFurniture from './images/image-about-dark.jpg';
-import lightFurniture from './images/image-about-light.jpg';
+import darkFurniture from '../images/image-about-dark.jpg';
+import lightFurniture from '../images/image-about-light.jpg';
 
 const About = () => {
   return (

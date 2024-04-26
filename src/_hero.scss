@@ -73,13 +73,14 @@
       top: 454px;
     }
 
-    .prev-btn,
-    .next-btn {
+    .button-prev,
+    .button-next {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: $Black;
+      color: $White;
       height: 55px;
       width: 55px;
       border: none;
@@ -89,9 +90,13 @@
         height: 80px;
         width: 80px;
       }
+      svg {
+        height: 3em;
+        width: 2em;
+      }
     }
-    .prev-btn:hover,
-    .next-btn:hover {
+    .button-prev:hover,
+    .button-next:hover {
       background-color: $VeryDarkGray;
     }
   }
