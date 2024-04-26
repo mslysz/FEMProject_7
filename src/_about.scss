@@ -3,15 +3,20 @@
   flex-direction: column;
   width: 100%;
 
-  @media (min-width: 1125px) {
+  @media (min-width: 768px) {
     flex-direction: row;
   }
 
   &__image {
-    @media (min-width: 1140px) {
+    @media (min-width: 768px) {
       object-fit: cover;
-      width: 22%;
-      min-width: 440px;
+      max-width: 220px;
+      width: 100%;
+    }
+    @media (min-width: 1125px) {
+      object-fit: cover;
+      max-width: 440px;
+      width: 100%;
     }
   }
 
@@ -19,8 +24,11 @@
     padding: 5em 2.2em 3em;
 
     @media (min-width: 768px) {
+      padding: 1em 2em;
+    }
+    @media (min-width: 1125px) {
       padding: 2em;
-      min-width: 400px;
+      min-width: 420px;
     }
     &-title {
       font-size: 1rem;

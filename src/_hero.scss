@@ -12,7 +12,10 @@
     padding: 5em 2.2em;
 
     @media (min-width: 768px) {
-      padding: 5em 3em;
+      padding: 8em 6em;
+    }
+    @media (min-width: 1125px) {
+      padding: 8em 1em;
     }
 
     @media (min-width: 1400px) {
@@ -24,6 +27,10 @@
       font-size: 2.2rem;
       font-weight: 700;
       line-height: 1;
+      @media (min-width: 768px) {
+        font-size: 2.4rem;
+        font-weight: 600;
+      }
       @media (min-width: 1400px) {
         font-size: 2.4rem;
       }
