@@ -1,21 +1,45 @@
 .hero {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1125px) {
+    flex-direction: row;
+  }
   &__image {
     min-height: 360px;
   }
   &__info {
     position: relative;
     padding: 5em 2.2em;
+
+    @media (min-width: 768px) {
+      padding: 5em 3em;
+    }
+
+    @media (min-width: 1400px) {
+      position: relative;
+      padding: 10em 8.5em;
+    }
+
     &-title {
       font-size: 2.2rem;
       font-weight: 700;
       line-height: 1;
+      @media (min-width: 1400px) {
+        font-size: 2.4rem;
+      }
     }
     &-description {
       padding: 1.2em 0 2.2em 0;
       font-size: 1rem;
       font-weight: 500;
       color: $DarkGray;
+      line-height: 1.3;
+      @media (min-width: 1125px) {
+        padding-bottom: 1em;
+      }
+      @media (min-width: 1400px) {
+        font-size: 1.1rem;
+      }
     }
     &-arrowIcon {
       text-decoration: none;
@@ -23,6 +47,9 @@
       font-weight: 600;
       font-size: 0.9rem;
       letter-spacing: 1em;
+      &:hover {
+        color: $DarkGray;
+      }
       img {
         display: inline-block;
       }
@@ -33,6 +60,12 @@
     display: flex;
     right: 0;
     top: -55px;
+    @media (min-width: 1125px) {
+      position: absolute;
+      left: 0;
+      top: 454px;
+    }
+
     .prev-btn,
     .next-btn {
       display: flex;
@@ -45,6 +78,10 @@
       border: none;
       cursor: pointer;
       transition: 0.3s;
+      @media (min-width: 1125px) {
+        height: 80px;
+        width: 80px;
+      }
     }
     .prev-btn:hover,
     .next-btn:hover {
