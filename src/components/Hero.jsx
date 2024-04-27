@@ -39,20 +39,27 @@ const Hero = () => {
         <h1 className='hero__info-title'>{title}</h1>
         <p className='hero__info-description'>{desc}</p>
         <a href='#' className='hero__info-arrowIcon'>
-          SHOP NOW <img src={arrowIcon} alt='arrow-image' />
+          SHOP NOW{' '}
+          <img
+            className='hero__info-arrowIcon'
+            src={arrowIcon}
+            alt='arrow-image'
+          />
         </a>
         <article className='hero__button-container'>
           <button
             type='button'
-            className='button-prev'
+            className='button-prev-page'
             onClick={handlePrevClick}
+            aria-label='Go to previous page'
           >
             <FaAngleLeft />
           </button>
           <button
             type='button'
-            className='button-next'
+            className='button-next-page'
             onClick={handleNextClick}
+            aria-label='Go to next page'
           >
             <FaAngleRight />
           </button>

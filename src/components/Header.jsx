@@ -18,7 +18,7 @@ const Header = ({ isVisible, setIsVisible }) => {
           <img src={burgerIcon} alt='burger-menu-icon' />
         </span>
         <figure className={isVisible ? 'header__logo--hidden' : 'header__logo'}>
-          <img src={logo} alt='logo-image' />
+          <img className='logo-image' src={logo} alt='logo-image' />
         </figure>
         <span
           className={isVisible ? 'close-icon--visible' : 'close-icon'}
