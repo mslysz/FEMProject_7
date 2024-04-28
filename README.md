@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Room-homepage-live](https://room-homepage-ms.netlify.app/)
 
 ## My process
 
@@ -53,5 +53,4 @@ When developing this project, I suggest focusing on the implementation of the sl
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@mslysz](https://www.frontendmentor.io/profile/mslysz)
