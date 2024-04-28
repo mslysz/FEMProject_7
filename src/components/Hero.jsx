@@ -2,20 +2,32 @@ import { useEffect, useState } from 'react';
 import heroData from '../data';
 import arrowIcon from '../images/icon-arrow.svg';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
-const Hero = () => {
+const Hero = ({ setIsVisible }) => {
   const [index, setIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 375);
 
   useEffect(() => {
+    let timeoutId;
+
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 375);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        if (window.innerWidth > 1125) {
+          setIsVisible(false);
+        }
+        setIsDesktop(window.innerWidth > 375);
+      }, 200);
     };
+
+    handleResize();
+
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      clearTimeout(timeoutId);
     };
-  }, []);
+  }, [setIsVisible]);
 
   const { title, desc } = heroData[index];
   const image = isDesktop
@@ -27,6 +39,7 @@ const Hero = () => {
       prevIndex === 0 ? heroData.length - 1 : prevIndex - 1
     );
   };
+
   const handleNextClick = () => {
     setIndex((prevIndex) =>
       prevIndex === heroData.length - 1 ? 0 : prevIndex + 1
@@ -51,7 +64,7 @@ const Hero = () => {
             type='button'
             className='button-prev-page'
             onClick={handlePrevClick}
-            aria-label='Go to previous page'
+            aria-label='Previous slide'
           >
             <FaAngleLeft />
           </button>
@@ -59,7 +72,7 @@ const Hero = () => {
             type='button'
             className='button-next-page'
             onClick={handleNextClick}
-            aria-label='Go to next page'
+            aria-label='Next slide'
           >
             <FaAngleRight />
           </button>

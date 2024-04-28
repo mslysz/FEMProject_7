@@ -10,7 +10,7 @@ function App() {
   return (
     <main className='container'>
       <Header isVisible={isVisible} setIsVisible={setIsVisible} />
-      <Hero />
+      <Hero setIsVisible={setIsVisible} />
       <About />
       <Modal isVisible={isVisible} />
     </main>
