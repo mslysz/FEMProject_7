@@ -2,6 +2,12 @@ import logo from '../images/logo.svg';
 import burgerIcon from '../images/icon-hamburger.svg';
 import Navigation from './Navigation';
 import closeIcon from '../images/icon-close.svg';
+import PropTypes from 'prop-types';
+
+Header.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  setIsVisible: PropTypes.func.isRequired,
+};
 
 const Header = ({ isVisible, setIsVisible }) => {
   const switchMenu = () => {
