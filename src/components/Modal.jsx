@@ -1,10 +1,5 @@
 import PropTypes from 'prop-types';
 
-Modal.propTypes = {
-  isVisible: PropTypes.bool.isRequired,
-  setIsVisible: PropTypes.func.isRequired,
-};
-
 const Modal = ({ isVisible }) => {
   return (
     <section
@@ -15,6 +10,10 @@ const Modal = ({ isVisible }) => {
       }
     ></section>
   );
+};
+
+Modal.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default Modal;
