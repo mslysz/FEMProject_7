@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import heroData from '../data';
 import arrowIcon from '../images/icon-arrow.svg';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
+import PropTypes from 'prop-types';
+
 const Hero = ({ setIsVisible }) => {
   const [index, setIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 375);
@@ -51,7 +53,11 @@ const Hero = ({ setIsVisible }) => {
       <article className='hero__info'>
         <h1 className='hero__info-title'>{title}</h1>
         <p className='hero__info-description'>{desc}</p>
-        <a href='#' className='hero__info-arrowIcon'>
+        <a
+          href='#'
+          className='hero__info-arrowIcon'
+          onClick={(e) => e.preventDefault()}
+        >
           SHOP NOW{' '}
           <img
             className='hero__info-arrowIcon'
@@ -82,4 +88,7 @@ const Hero = ({ setIsVisible }) => {
   );
 };
 
+Hero.propTypes = {
+  setIsVisible: PropTypes.func.isRequired,
+};
 export default Hero;

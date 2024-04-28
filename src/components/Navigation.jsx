@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const Navigation = ({ isVisible }) => {
   return (
     <nav className={isVisible ? 'nav nav__visible' : 'nav'}>
@@ -25,6 +26,10 @@ const Navigation = ({ isVisible }) => {
       </ul>
     </nav>
   );
+};
+
+Navigation.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default Navigation;
